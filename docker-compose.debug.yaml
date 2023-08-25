@@ -1,0 +1,3 @@
+services:
+  keep-alive:
+    command: npm run start:debug

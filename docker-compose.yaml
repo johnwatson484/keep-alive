@@ -1,0 +1,5 @@
+services:
+  keep-alive:
+    build: .
+    image: keep-alive
+    container_name: keep-alive

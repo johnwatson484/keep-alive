@@ -1,0 +1,15 @@
+services:
+  keep-alive:
+    build:
+      target: development
+    image: keep-alive-development
+    container_name: keep-alive-development
+    ports:
+      - "9229:9229"
+    volumes:
+      - ./app:/home/node/app
+      - ./package.json:/home/node/package.json
+      - ./scripts:/home/node/scripts
+    environment:
+      ENDPOINTS: "https://google.com;https://msn.com" 
+    entrypoint: npm run start:watch
