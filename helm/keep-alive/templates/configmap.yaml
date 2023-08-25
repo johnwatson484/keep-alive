@@ -1,5 +1,5 @@
 {{- include "helm-library.configmap" (list . "keep-alive.configmap") -}}
 {{- define "keep-alive.configmap" -}}
 data:
-  ENDPOINTS: {{ quote .Values.endpoints }}
+  ENDPOINTS: {{ quote .Values.container.endpoints }}
 {{- end -}}

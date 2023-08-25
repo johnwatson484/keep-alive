@@ -1,6 +1,6 @@
 {
   "name": "keep-alive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Keep service endpoints active to prevent cool down",
   "main": "app/index.js",
   "type": "module",
