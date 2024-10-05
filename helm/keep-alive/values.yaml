@@ -1,6 +1,7 @@
 container:
   image: keep-alive
   resourceTier: S
+  skipDefault: true
 
 configMap:
   environment: production
