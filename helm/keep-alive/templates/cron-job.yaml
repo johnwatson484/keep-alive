@@ -1,5 +1,7 @@
 {{- include "helm-library.cron-job" (list . "keep-alive.cron-job") -}}
 {{- define "keep-alive.cron-job" -}}
+metadata:
+  name: {{ .Chart.Name }}
 spec:
   successfulJobsHistoryLimit: {{ .Values.cronJob.successfulJobsHistoryLimit }}
 {{- end -}}
