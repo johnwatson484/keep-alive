@@ -1,5 +1,2 @@
 {{- define "keep-alive.container" -}}
-envFrom:
-- configMapRef:
-    name: {{ .Values.name }}
 {{- end -}}

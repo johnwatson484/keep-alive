@@ -1,5 +1,6 @@
 {{- include "helm-library.configmap" (list . "keep-alive.configmap") -}}
 {{- define "keep-alive.configmap" -}}
 data:
-  ENDPOINTS: {{ quote .Values.container.endpoints }}
+  NODE_ENV: {{ quote .Values.configMap.environment }}
+  ENDPOINTS: {{ quote .Values.configMap.endpoints }}
 {{- end -}}

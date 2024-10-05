@@ -17,4 +17,3 @@ extends:
     name: keep-alive
     deploy: true
     namespace: keep-alive
-    hasSecureHelmValuesFile: false

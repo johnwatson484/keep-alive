@@ -1,13 +1,5 @@
 {{- include "helm-library.cron-job" (list . "keep-alive.cron-job") -}}
 {{- define "keep-alive.cron-job" -}}
-metadata:
-  name: {{.Values.name }}
 spec:
   successfulJobsHistoryLimit: {{ .Values.cronJob.successfulJobsHistoryLimit }}
-  jobTemplate: 
-    spec:
-      template:
-        spec:
-          containers:
-          - {{ include "helm-library.container" (list . "keep-alive.container") | nindent 12 }}
 {{- end -}}

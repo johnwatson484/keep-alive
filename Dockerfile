@@ -1,6 +1,6 @@
 # Development
-FROM node:18-alpine AS development
-ENV NODE_ENV development
+FROM node:20-alpine AS development
+ENV NODE_ENV=development
 EXPOSE 9229
 # Set global npm dependencies to be stored under the node user directory
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
@@ -12,12 +12,12 @@ RUN apk update && \
 USER node
 WORKDIR /home/node
 COPY --chown=node:node package*.json ./
-RUN npm install --production=false
+RUN npm install
 COPY --chown=node:node ./app ./app
 CMD [ "npm", "run", "start:watch" ]
 
 # Production
 FROM development AS production
-ENV NODE_ENV production
+ENV NODE_ENV=production
 RUN npm ci
 CMD [ "node", "app" ]

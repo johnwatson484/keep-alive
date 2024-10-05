@@ -1,12 +1,10 @@
-environment: production
-name: keep-alive
-image: keep-alive
 
 container:
-  requestMemory: 100Mi
-  requestCpu: 100m
-  limitMemory: 100Mi
-  limitCpu: 100m
+  image: keep-alive
+  resourceTier: S
+
+configMap:
+  environment: production
   endpoints: https://weather.redkitedevelopment.co.uk
 
 cronJob: 
@@ -14,6 +12,3 @@ cronJob:
   concurrencyPolicy: Forbid
   restartPolicy: Never
   successfulJobsHistoryLimit: 1
-
-secret:
-  type: Opaque
