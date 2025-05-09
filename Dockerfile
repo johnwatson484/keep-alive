@@ -1,5 +1,5 @@
 # Development
-FROM node:20-alpine AS development
+FROM node:22-alpine AS development
 ENV NODE_ENV=development
 EXPOSE 9229
 # Set global npm dependencies to be stored under the node user directory
@@ -19,5 +19,5 @@ CMD [ "npm", "run", "start:watch" ]
 # Production
 FROM development AS production
 ENV NODE_ENV=production
-RUN npm ci
+RUN npm ci --no-scripts
 CMD [ "node", "app" ]
