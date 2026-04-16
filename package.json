@@ -1,6 +1,6 @@
 {
   "name": "keep-alive",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Keep service endpoints active to prevent cool down",
   "main": "app/index.js",
   "type": "module",
@@ -11,10 +11,10 @@
   "author": "John Watson",
   "license": "MIT",
   "dependencies": {
-    "axios": "1.9.0"
+    "axios": "1.15.0"
   },
   "devDependencies": {
-    "eslint": "9.26.0",
+    "eslint": "9.39.4",
     "neostandard": "0.12.1",
     "nodemon": "3.0.1"
   },
