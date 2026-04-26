@@ -1,4 +1,4 @@
-[![Build Status](https://dev.azure.com/johnwatson484/John%20D%20Watson/_apis/build/status%2FKeep%20Alive?branchName=main)](https://dev.azure.com/johnwatson484/John%20D%20Watson/_build/latest?definitionId=69&branchName=main)
+[![Build Status](https://github.com/johnwatson484/keep-alive/actions/workflows/build.yaml/badge.svg)](https://github.com/johnwatson484/keep-alive/actions/workflows/build.yaml)
 
 # Keep Alive
 
@@ -11,7 +11,7 @@ Either:
 - Docker Compose
 
 Or:
-- Node 20
+- Node 24
 
 ## Running application
 ### Docker

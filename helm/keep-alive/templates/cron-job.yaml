@@ -1,3 +1,0 @@
-{{- include "helm-library.cron-job" (list . "keep-alive.cron-job") -}}
-{{- define "keep-alive.cron-job" -}}
-{{- end -}}
